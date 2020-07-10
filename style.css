@@ -1,12 +1,23 @@
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
 body {
-    padding: 0px 75px 0px 75px;
-    margin: 30px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #f4f4f4;
+}
+.container {
+    
+    width: 1200px;
+    margin: 30px 0px 0px;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     color: #666666;
 }
+/**first section**/
 .first-sec {
     height: 1200px;
     display: flex;
@@ -14,9 +25,7 @@ body {
     margin-bottom: 30px;
 }
 .text {
-    height: 33.33333333333%;
-    width: 40%;
-    padding: 0px 5% 0px 5%;
+    padding: 0px 5%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -25,12 +34,33 @@ body {
 .lake-img {
     width: 50%;
     height: 33.33333333333%;
+    order: 3;
 }
 .colored-bground {
+    height: 33.33333333333%;
+    width: 50%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: #993333;
     color: white;
+    
+}
+.white-bg {
+    width: 40%;
+    height: 33.33333333333%;
+   
+}
+.ord1 {
+    display: flex;
+    order:1;
+}
+.ord2 {
+    order: 2;
+}
+.ord4 {
+    order: 4;
 }
 .imgs {
     height: 100%;
@@ -49,6 +79,7 @@ h2 {
 }
 p {
     line-height: 1.8;
+    margin: 20px 0px;
 }
 .italic-txt {
     font-size: 1.35rem;
@@ -116,6 +147,10 @@ p {
     height: 600px;
     margin-bottom: 30px;
 }
+.basketball-img {
+    height: 100%;
+    width: 33.333333333333%;
+}
 .rd-sec-elements {
     height: 100%;
     width: 33.333333333333%;
@@ -146,7 +181,7 @@ p {
     height: 430px;
     border: #009999 solid 1px;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 ul {
     list-style: none;
@@ -169,12 +204,12 @@ ul {
 /*fourth section style*/
 .bg-top {
     background-color: #993333;
-    color:white;
     display: flex;
     padding: 40px 40px 90px;
 }
 .top-title {
-    padding-left: 120px;
+    padding-left: 11%;
+    color:white;
 }
 .bg-middle {
     height: 450px;
@@ -210,8 +245,6 @@ ul {
 .ctn-right {
     width: 340px;
     padding-left: 60px;
-    display: flex;
-    flex-direction: column;
     margin-bottom: 20px;
 }
 select {
@@ -257,6 +290,8 @@ h3 {
 }
 address {
     font-style: normal;
+    line-height: 1.8;
+    margin-top: 20px ;
 }
 .p {
     padding-left: 200px;
@@ -265,8 +300,10 @@ address {
 footer {
     height: 70px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .cr {
     text-decoration: none;
@@ -275,4 +312,178 @@ footer {
 .cr:hover {
     text-decoration: underline;
     color: #035ebe;
+}
+/**media queries**/
+@media screen and (max-width:1200px) {
+    .container {
+        max-width: 960px;
+    }
+    .bordered-box {
+        width: 238px;
+        height: 70%;  
+    }
+    .pricing-header {
+        width: 240px;
+    }
+    .top-title {
+        padding-left: 0%;
+    }
+}
+@media screen and (max-width:992px) {
+    .container {
+        max-width: 720px;
+    }
+    .first-sec {
+        display: block;
+        height: 2000px;
+    }
+    .lake-img {
+        width: 100%;
+        height: 21%;
+    }
+    .colored-bground {
+        height: 21%;
+        width: 100%;
+    }
+    .white-bg {
+        width: 90%;
+        height: 12.33333333333%;
+    }
+    .read-mr {
+        align-self: center;
+    }
+    .second-sec {
+        height: 1500px;
+        justify-content: center;
+    }
+    .nd-sec-pg {
+        width: 80%;
+        height: 45%;    
+    }
+    .nd-sec-img {
+        width: 80%;
+        height: 55%;
+    }
+    .third-sec {
+        height: 1500px;
+        justify-content: center;
+    }
+    .basketball-img {
+        height: 55%;
+        width: 80%;
+    }
+    .rd-sec-elements {
+        height: 45%;
+        width: 45%;
+    }
+    .contain {
+        width: 500px;
+        height: 365px;
+        padding: 68px;
+    }
+    .ctn-left {
+        width: 160px;
+    }
+    .ctn-elements {
+        width: 100% ;
+        margin-bottom: 20px;
+    }
+    .ctn-txt {
+        padding: 15px 19px; 
+    }
+    .ctn-right {
+        width: 200px;
+        padding-left: 60px;
+    }
+    select {
+        width: 200px;
+    }
+    .gender {
+        margin-left: 0px;
+    }
+    textarea {
+        width: 170px;
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width:768px) {
+    .container {
+        max-width: 540px;
+    }
+    .lake-img {
+        height: 17%;
+    }
+    .ord2 {
+        height: 17%;
+    }
+    .white-bg {
+        height: 15%;
+    }
+    .nd-sec-pg {
+        height: 50%;
+    }
+    .nd-sec-img {
+        width: 94%;
+        height: 50%;
+    }
+    .third-sec {
+        height: 2000px;
+    }
+    .basketball-img {
+        height: 40%;
+        width: 94%;
+    }
+    .rd-sec-elements {
+        height: 30%;
+        width: 100%;
+        margin: 0px;
+    }
+    .pricing-header {
+        width: 280px;
+    }
+    .bordered-box {
+        width: 278px;
+    }
+    .bg-middle {
+        height: 790px;
+    }
+    .contain {
+        width: 370px;
+        height: 690px;
+        display: block;
+    }
+    .ctn-left {
+        width: 306px;
+    }
+    .ctn-txt {
+        padding: 15px 19px;  
+    }
+    .ctn-right {
+        width: 306px;
+        padding-left: 0px;
+    }
+    select {
+        width: 348px;
+    }
+    .gender {  
+        display: block;
+    }
+    textarea {
+        width: 306px;
+        margin-bottom: 20px;
+    }
+    .submt {
+        display: flex;
+        justify-content: center;
+    }
+    .bg-bottom {
+        align-items: center;
+        flex-direction: column;
+    }
+    address {
+        line-height: 1.5;
+    }
+    .p {
+        padding-left: 0px;
+    }
 }
